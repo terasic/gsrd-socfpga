@@ -5,8 +5,9 @@ It is based on Yocto Project Poky reference distribution.
 
 ## Meta Layers
 
-* meta-intel-fpga - SoCFPGA BSP Core Layer
+* meta-intel-fpga        - SoCFPGA BSP Core Layer
 * meta-intel-fpga-refdes - SoCFPGA GSRD Customization Layer
+* meta-terasic           - SoCFPGA GSRD Customization Layer for Terasic Boards
 
 Dependencies
 * poky - Core Layer from Yocto Project
@@ -34,13 +35,14 @@ Dependencies
 | Stratix10 H-Tile           |   gsrd [ pr + qspi ]                         |
 | Arria10                    |   gsrd, qspi, nand, pcie, pr, sgmii, tse     |
 | Cyclone5                   |   gsrd                                       |
+| Comet-A65                  |   gsrd (boot from sdcard or emmc)            |
 | Default                    |   gsrd                                       |
 
 
 ## Default GSRD Setup
 
 1. Clone the repository  
-`$ git clone -b $POKY_VERSION https://github.com/altera-fpga/gsrd-socfpga.git`
+`$ git clone -b $BRANCH_VERSION https://github.com/terasic/gsrd-socfpga.git`
 2. Sync the submodules  
 `$ cd gsrd-socfpga`  
 `$ git submodule update --init -r`
@@ -61,6 +63,7 @@ Dependencies
 | Stratix10 H-Tile           | $ . stratix10_htile-gsrd-build.sh              |
 | Arria10                    | $ . arria10-$Image-build.sh                    |
 | Cyclone V                  | $ . cyclone5-gsrd-build.sh                     |
+| Comet-A65                  | $ . comet_a65-gsrd-build.sh                    |
 
 4. Build default GSRD setup  
 `$ build_default`  
@@ -68,7 +71,7 @@ Dependencies
 ## Default GSRD Setup with eSDK
 
 1. Clone the repository  
-`$ git clone -b $POKY_VERSION https://github.com/altera-fpga/gsrd-socfpga.git`
+`$ git clone -b $BRANCH_VERSION https://github.com/terasic/gsrd-socfpga.git`
 2. Sync the submodules  
 `$ cd gsrd-socfpga`  
 `$ git submodule update --init -r`
@@ -89,6 +92,7 @@ Dependencies
 | Stratix10 H-Tile           | $ . stratix10_htile-gsrd-build.sh              |
 | Arria10                    | $ . arria10-$Image-build.sh                    |
 | Cyclone V                  | $ . cyclone5-gsrd-build.sh                     |
+| Comet-A65                  | $ . comet_a65-gsrd-build.sh                    |
 
 4. Build default GSRD setup + eSDK  
 `$ build_esdk`  
@@ -96,7 +100,7 @@ Dependencies
 ## Custom GSRD Setup
 
 1. Clone the repository  
-`$ git clone -b $POKY_VERSION https://github.com/altera-fpga/gsrd-socfpga.git`
+`$ git clone -b $BRANCH_VERSION https://github.com/terasic/gsrd-socfpga.git`
 2. Sync the submodules  
 `$ cd gsrd-socfpga`  
 `$ git submodule update --init -r`
@@ -117,6 +121,7 @@ Dependencies
 | Stratix10 H-Tile           | $ . stratix10_htile-gsrd-build.sh              |
 | Arria10                    | $ . arria10-$Image-build.sh                    |
 | Cyclone V                  | $ . cyclone5-gsrd-build.sh                     |
+| Comet-A65                  | $ . comet_a65-gsrd-build.sh                    |
 
 4. Setup build environment  
 `$ build_setup`
