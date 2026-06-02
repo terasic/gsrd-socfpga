@@ -20,7 +20,7 @@ SRC_URI:titan_s10_som ?= "\
 		file://${MACHINE}/${ARM64_GHRD_CORE_RBF};name=${MACHINE}_core; \
 		"
 
-SRC_URI[titan_s10_som_core.sha256sum] = "3334889a7d84ba5c66c542a052be35e1155ae325e40029c232308acdd56e92d0"
+SRC_URI[titan_s10_som_core.sha256sum] = "525188d8c809714223f7acee5ad25e3a2afc3a24fc651b69ca1f3f41f92a6b7a"
 
 S ?= "${WORKDIR}/${MACHINE}"
 
